@@ -1,13 +1,10 @@
 <template>
   <div class="slides">
-    <div
-      v-show="currentSlide === index"
-      class="slide-info"
-    >
-      <h1>{{item.headline}}</h1>
-      <p>{{item.paragraph}}</p>
+    <div class="slide-info">
+      <h1>{{headline}}</h1>
+      <p>{{paragraph}}</p>
       <img
-        :src="require(`@/assets/img/${item.img}`)"
+        :src="require(`@/assets/${img}`)"
         alt="test"
       />
     </div>
@@ -15,30 +12,13 @@
 </template>
 
 <script>
-import { useStore } from 'vuex'
 
 export default {
   name: 'Slider',
-  setup () {
-    const store = useStore()
-    const content = store.getters.getContent
-    // const content = store.getters.getContent.map(item => { return item })
-    const imgSrc = content.map(item => {
-      return item.img
-    })
+  props: ['headline', 'paragraph', 'img'],
 
-
-    console.log(imgSrc)
-    // console.log(imgSrc[0])
-
-    console.log(content)
-
-    return { content, imgSrc }
-
-  }
 }
 </script>
-
 
 <style lang="scss" scoped>
 .slides {

@@ -1,5 +1,5 @@
 <template>
-  <div class="slider">
+  <div class="slides">
     <slot :currentSlide="currentSlide" />
 
     <!-- Navigation -->
@@ -101,7 +101,7 @@ export default {
 
 
 <style lang="scss">
-.slider {
+.navigate {
   padding: 0 16px;
   height: 100%;
   width: 100%;
