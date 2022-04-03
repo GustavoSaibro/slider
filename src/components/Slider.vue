@@ -99,13 +99,13 @@ export default {
 }
 </script>
 
-
-<style lang="scss">
+<style lang="scss" scoped>
 .navigate {
   padding: 0 16px;
   height: 100%;
   width: 100%;
-  position: absolute;
+  top: -50vh;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;

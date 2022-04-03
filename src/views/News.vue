@@ -2,9 +2,8 @@
   <Slider
     :navigation="true"
     :pagination="true"
-    :startAutoPlay="true"
-    :timeout="8000"
-    class="slides"
+    :startAutoPlay="false"
+    :timeout="2000"
     v-slot="{currentSlide}"
   >
     <Slide
@@ -49,25 +48,5 @@ export default {
 </script>
 
 
-<style lang="scss" scoped>
-.slides {
-  position: relative;
-  max-height: 100vh;
-  height: 100vh;
-
-  .slide-info {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    max-height: 100%;
-    height: 100%;
-
-    img {
-      min-width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-}
+<style lang="scss" >
 </style>

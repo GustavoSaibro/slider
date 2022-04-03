@@ -1,8 +1,10 @@
 <template>
   <div class="slides">
     <div class="slide-info">
-      <h1>{{headline}}</h1>
-      <p>{{paragraph}}</p>
+      <div class="news-info">
+        <h1>{{headline}}</h1>
+        <p>{{paragraph}}</p>
+      </div>
       <img
         :src="require(`@/assets/${img}`)"
         alt="test"
@@ -33,6 +35,17 @@ export default {
     width: 100%;
     max-height: 100%;
     height: 100%;
+
+    .news-info {
+      // object-fit: cover;
+      position: absolute;
+      color: #fff;
+      height: 50%;
+      width: 50%;
+      top: 15%;
+      left: 25%;
+      text-align: center;
+    }
 
     img {
       min-width: 100%;
