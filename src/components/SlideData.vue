@@ -22,11 +22,12 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 .slides {
   position: relative;
-  max-height: 100vh;
-  height: 100vh;
+  max-height: 50vh;
+  height: 50vh;
+  overflow: hidden;
 
   .slide-info {
     position: absolute;
@@ -38,12 +39,14 @@ export default {
 
     .news-info {
       // object-fit: cover;
+
       position: absolute;
       color: #fff;
       height: 50%;
       width: 50%;
       top: 15%;
       left: 25%;
+      z-index: 1;
 
       h1 {
         font-size: 2em;
@@ -52,16 +55,20 @@ export default {
         padding: 20px;
       }
       p {
-        position: relative;
+        // position: absolute;
         max-height: 100%;
         max-width: 100%;
       }
     }
 
     img {
+      position: absolute;
       min-width: 100%;
+      min-height: 100%;
       height: 100%;
-      object-fit: cover;
+      width: 100%;
+
+      object-fit: fill;
     }
   }
 }
