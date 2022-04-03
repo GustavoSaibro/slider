@@ -44,7 +44,18 @@ export default {
       width: 50%;
       top: 15%;
       left: 25%;
-      text-align: center;
+
+      h1 {
+        font-size: 2em;
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+      }
+      p {
+        position: relative;
+        max-height: 100%;
+        max-width: 100%;
+      }
     }
 
     img {
